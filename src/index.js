@@ -10,7 +10,7 @@ const refs = {
 	countryList: document.querySelector('.country-list'),
 	countryInfo: document.querySelector('.country-info'),
 };
-const DEBOUNCE_DELAY = 500;
+const DEBOUNCE_DELAY = 300;
 let countryName = '';
 
 refs.searchBox.addEventListener(
@@ -19,7 +19,7 @@ refs.searchBox.addEventListener(
 );
 
 function onSearchCountry(e) {
-	countryName = e.target.value;
+	countryName = e.target.value.trim();
 
 	resetRender();
 
